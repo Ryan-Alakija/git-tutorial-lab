@@ -7,6 +7,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      
+      - name: Setup Java
+        users: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
@@ -16,4 +19,3 @@ jobs:
       
       - name: Test the code
         run: ./gradlew run --args="Ryan-Alakija"
-        
